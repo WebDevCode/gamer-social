@@ -343,19 +343,13 @@
 
 /*Home*/
 /*Landing Decoration*/
-@screen lg {
+@screen xl {
     .landing-decoration {
         @apply absolute bg-body;
         border-radius: 50%;
-        height: 120%;
-        width: 64%;
-        top: -10%;
-        right: -32%;
-    }
-}
-@screen xl {
-    .landing-decoration {
         height: 140%;
+        width: 64%;
         top: -20%;
+        right: -32%;
     }
 }

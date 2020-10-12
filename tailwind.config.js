@@ -138,6 +138,7 @@ module.exports = {
     },
     variants: {
         borderWidth: ["responsive", "focus"],
+        backgroundColor: ['responsive', 'hover', 'focus', 'active'],
     },
     plugins: [],
 };
