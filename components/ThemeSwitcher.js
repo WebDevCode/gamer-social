@@ -5,7 +5,7 @@ const ThemeSwitcher = () => {
     const { toggleTheme } = useContext(ThemeContext);
     return (
         <button
-            className="iconWrapper themeToggle"
+            className="iconWrapper themeToggle focus:outline-none"
             onClick={() => {
                 toggleTheme();
             }}

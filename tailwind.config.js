@@ -16,6 +16,7 @@ module.exports = {
                 dark: "var(--black-dark)",
                 darker: "var(--black-darker)",
                 darkMid: "var(--black-dark-mid)",
+                true: "var(--black-true)",
             },
             white: {
                 default: "var(--white)",
@@ -85,6 +86,25 @@ module.exports = {
             textColorAltLight: "var(--color-text-alt-light)",
             textSelection: "var(--color-text-selection)",
             textLink: "var(--color-text-link)",
+            textInput: "var(--color-input-placeholder)",
+        },
+        fontFamily: {
+            sans: [
+                "Inter",
+                "Roboto",
+                '"Helvetica Neue"',
+                "Arial",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "sans-serif",
+            ],
+        },
+        fontWeight: {
+            light: "300",
+            normal: "400",
+            bold: "700",
+            display: "900",
         },
         backgroundColor: (theme) => ({
             ...theme("colors"),
@@ -92,13 +112,32 @@ module.exports = {
             boxBg: "var(--color-box-bg)",
             boxBgAlt: "var(--color-box-bg-alt)",
             boxBgLight: "var(--color-box-bg-light)",
+            boxBgDark: "var(--color-box-bg-dark)",
         }),
+        boxShadow: {
+            shadowPrimary: "3px 5px 20px 0 rgba(0, 0, 0, 0.1)",
+            shadowAlt: "0 0 40px 0 rgba(0, 0, 0, 0.1)",
+            shadowAlt2: "3px 5px 40px 0 rgba(0, 0, 0, 0.1)",
+            shadowLigt: "0 0 40px 0 rgba(0, 0, 0, 0.06)",
+            shadowLightAlt: "3px 5px 40px 0 rgba(0, 0, 0, 0.06)",
+            shadowDark: "0 0 40px 0 rgba(0, 0, 0, 0.12)",
+            shadowDarkAlt: "3px 5px 20px 0 rgba(0, 0, 0, 0.12)",
+            shadowDarkAlt2: "2px 3px 10px 0 rgba(0, 0, 0, 0.12)",
+            shadowDarkAlt3: "0 0 60px 0 rgba(0, 0, 0, 0.12)",
+            shadowDarker: "3px 5px 20px 0px rgba(0, 0, 0, 0.16)",
+        },
         extend: {
             screens: {
                 xs: "576px",
             },
+            backgroundImage: (theme) => ({
+                homebg: "var(--landing-bg)",
+                homepattern: "var(--landing-pattern)",
+            }),
         },
     },
-    variants: {},
+    variants: {
+        borderWidth: ["responsive", "focus"],
+    },
     plugins: [],
 };

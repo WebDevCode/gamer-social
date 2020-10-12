@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+
 :root {
     --white: #fff;
     --white-dark: #fcfcfd;
@@ -11,6 +13,7 @@
     --black-dark: #2e2e47;
     --black-dark-mid: #302f45;
     --black-darker: #15151f;
+    --black-true: #000000;
 
     --cyan-dark: #00c7d9; /*used*/
     --cyan: #23d2e2; /*used*/
@@ -60,7 +63,12 @@
     html,
     body,
     #__next {
-        @apply h-full w-full;
+        @apply h-full w-full font-sans;
+        overflow-x: hidden;
+    }
+
+    #__next {
+        @apply flex flex-col;
     }
 }
 
@@ -91,6 +99,7 @@
     --color-box-bg: #1d2333;
     --color-box-bg-alt: #21283b;
     --color-box-bg-light: #293249;
+    --color-box-bg-dark: var(--color-box-bg-alt);
 
     /*Text Colors*/
     --color-text: var(--white);
@@ -111,7 +120,7 @@
     --color-rating-icon: var(--color-icon);
 
     /*Border Colors*/
-    --color-divider: #2f3749;
+    --color-divider: #010102;
     --color-border: #3f485f;
     --color-border-dark: var(--color-icon-dark);
 
@@ -159,6 +168,10 @@
     --color-pattern-2: #08b8f1;
     --color-pattern-3: #00e2cb;
     --color-pattern-4: #66e273;
+
+    /*Background Patter*/
+    --landing-bg: url("/img/landing/dark-pattern.jpg");
+    --landing-pattern: url("/img/landing/dark-pattern.png");
 }
 
 .themeLight {
@@ -185,8 +198,9 @@
 
     /*Box Colors*/
     --color-box-bg: var(--white);
-    --color-box-bg-alt: var(--white-dark);
+    --color-box-bg-alt: var(--gray-lighter);
     --color-box-bg-light: var(--white);
+    --color-box-bg-dark: var(--gray-dark);
 
     /*Text Colors*/
     --color-text: var(--black);
@@ -255,6 +269,10 @@
     --color-pattern-2: var(--blue);
     --color-pattern-3: var(--blue-light);
     --color-pattern-4: var(--cyan);
+
+    /*Background Patter*/
+    --landing-bg: url("/img/landing/white-pattern.jpg");
+    --landing-pattern: url("/img/landing/white-pattern.png");
 }
 
 /*Theme Toggle Styles*/
@@ -311,11 +329,33 @@
     transform: scale(1);
 }
 .moonMask {
-    @apply absolute top-0 right-0 w-6 h-6 bg-white border-0 rounded-full opacity-100;
+    @apply absolute top-0 right-0 w-6 h-6 bg-blue border-0 rounded-full opacity-100;
     transition: background 0.25s ease, transform 0.45s ease;
     transform: translate(0, 0);
+}
+#blackbg .moonMask {
+    @apply bg-black-true;
 }
 .themeDark .moonMask {
     opacity: 0;
     transform: translate(14px, -14px);
+}
+
+/*Home*/
+/*Landing Decoration*/
+@screen lg {
+    .landing-decoration {
+        @apply absolute bg-body;
+        border-radius: 50%;
+        height: 120%;
+        width: 64%;
+        top: -10%;
+        right: -32%;
+    }
+}
+@screen xl {
+    .landing-decoration {
+        height: 140%;
+        top: -20%;
+    }
 }
