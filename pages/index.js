@@ -36,10 +36,10 @@ const Home = () => {
                         badges gamification system!
                     </p>
                     <div className="flex flex-row justify-between mt-8 rounded-lg">
-                        <button key="login"  onClick={(event) => toggleTabs(event, 'login')} className={`${current ==='login' ? 'bg-white text-black' : 'text-white'} py-2 px-8 w-2/4 text-centerDark  hover:text-textColor rounded-tl-lg rounded-bl-lg focus:outline-none border border-white`}>
+                        <button key="login"  onClick={(event) => toggleTabs(event, 'login')} className={`${current ==='login' ? 'bg-white text-black' : 'text-white'} py-2 px-8 w-2/4 text-centerDark  hover:text-textColor rounded-tl-lg rounded-bl-lg focus:outline-none border border-r-0 border-white`}>
                             Login
                         </button>
-                        <button key="register"  onClick={(event) => toggleTabs(event, 'register')} className={`${current ==='register' ? 'bg-white text-black' : 'text-white'} py-2 px-8 w-2/4 text-centerDark hover:text-textColor rounded-tr-lg rounded-br-lg focus:outline-none border border-white`}>
+                        <button key="register"  onClick={(event) => toggleTabs(event, 'register')} className={`${current ==='register' ? 'bg-white text-black' : 'text-white'} py-2 px-8 w-2/4 text-centerDark hover:text-textColor rounded-tr-lg rounded-br-lg focus:outline-none border border-l-0 border-white`}>
                             Register
                         </button>
                     </div>
